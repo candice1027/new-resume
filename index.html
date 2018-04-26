@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my resume</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="//at.alicdn.com/t/font_640349_yksi8qb1bwsfko6r.js"></script>
+</head>
+<body>
+    <!-- loading -->
+    <div id="welcome" class="site-welcome active">
+        <div class="loading"></div>
+    </div>
+ 
+    <!-- 头部 -->
+    <header>
+        <div  class="navBarMain">
+            <div id="topNavBar" class="navBar clearfix">
+                <a class="logo" href="javascript:;">
+                    <span class="rs">RS</span>
+                    <span class="card">card</span>
+                </a>
+                <nav class="menu">    
+                    <ul class="clearfix">
+                        <li><a href="javascript:;">主页</a></li>
+                        <li class="menu-trigger">
+                            <a href="#skill-part">技能</a>
+                            <ul class="second-menu ">
+                                <li>作品1</li>
+                                <li>作品2</li>
+                                <li>作品3</li>
+                            </ul>
+                        </li>
+                        <li><a href="#project-part">项目</a></li>
+                        <li class="menu-trigger">
+                            <a href="javascript:;">博客</a>
+                            <ul class="second-menu">
+                                <li>博客1</li>
+                                <li>博客2</li>
+                                <li>博客3</li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">联系方式</a></li>
+                        <li><a href="javascript:;">其他</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>  
+    </header>
+    <div class="banner"><div class="mask"></div></div>
+    <!-- 主要内容 -->
+    <main>
+        <div class="personal">
+            <div class="content clearfix">
+                <div class="my-pic"><img src="images/f.jpg" alt="" width="300" height="350"></div>
+                <div class="my-info">
+                    <span class="welcome">Hello
+                        <i class="triangle"></i>
+                    </span>
+                    <h1>吕素珍</h1>
+                    <p>中级前端开发工程师</p>
+                    <hr>
+                    <dl>
+                        <dt>出生年月</dt>
+                        <dd>1990年10月</dd>
+                        <dt>所在城市</dt>
+                        <dd>上海</dd>
+                        <dt>联系方式</dt>
+                        <dd>180-7289-5256</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="media">
+                <a href="javascript:;">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+                <a href="javascript:;">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg></a>
+                <a href="javascript:;"></a>
+            </div>
+        </div>
+        <p class="download-btn"><a href="" target="_blank" download="true">下载PDF简历</a></p>
+        <p class="self-info">我是一名中级前端工程师，现就职于波奇网，主要项目有波奇网pc商城，o2o后台，h5商城，h5活动</p>
+    </main>
+
+    <section class="skills" id="skill-part">
+        <h3>技能</h3>
+        <ol class="clearfix">
+            <li><h4>html5&css3</h4><div class="progressBar"><div style="width:90%" class="innerBar"></div></div></li>
+            <li><h4>javascript</h4><div class="progressBar"><div style="width:90%" class="innerBar"></div></div></li>
+            <li><h4>jQuery    </h4><div class="progressBar"><div style="width:90%" class="innerBar"></div></div></li>
+            <li><h4>Vue.js    </h4><div class="progressBar"><div style="width:70%" class="innerBar"></div></div></li>
+            <li><h4>React.js  </h4><div class="progressBar"><div style="width:70%" class="innerBar"></div></div></li>
+            <li><h4>Node.js   </h4><div class="progressBar"><div style="width:70%" class="innerBar"></div></div></li>
+        </ol>
+    </section>
+    <section class="projects" id="project-part">
+        <h3>项目</h3>
+        <nav>
+            <ol id="projectList" class="clearfix">
+                <li>所有</li>
+                <li>原生</li>
+                <li>框架</li>
+            </ol>
+            <div  class="light-bar "><div id="lightBar" class="light-inner state-3"></div></div>
+        </nav>  
+        <div class="works">
+            <div class="big"><img src="images/1.jpg" alt=""></div>
+            <div class="small"><img src="images/2.jpg" alt=""></div>
+            <div class="small"><img src="images/3.jpg" alt=""></div>
+        </div>
+    </section>
+    <!-- 底部 -->
+    <footer></footer>
+    <script src="index.js"></script>
+    <script>
+
+        
+    </script>
+</body>
+</html>
