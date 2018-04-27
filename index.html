@@ -10,9 +10,9 @@
 </head>
 <body>
     <!-- loading -->
-    <div id="welcome" class="site-welcome active">
+    <!-- <div id="welcome" class="site-welcome active">
         <div class="loading"></div>
-    </div>
+    </div> -->
  
     <!-- 头部 -->
     <header>
@@ -24,7 +24,7 @@
                 </a>
                 <nav class="menu">    
                     <ul class="clearfix">
-                        <li><a href="javascript:;">主页</a></li>
+                        <li><a href="#main-part">主页</a></li>
                         <li class="menu-trigger">
                             <a href="#skill-part">技能</a>
                             <ul class="second-menu ">
@@ -52,7 +52,7 @@
     <div class="banner"><div class="mask"></div></div>
     <!-- 主要内容 -->
     <main>
-        <div class="personal">
+        <div data-x id="main-part" class="personal">
             <div class="content clearfix">
                 <div class="my-pic"><img src="images/f.jpg" alt="" width="300" height="350"></div>
                 <div class="my-info">
@@ -89,7 +89,7 @@
         <p class="self-info">我是一名中级前端工程师，现就职于波奇网，主要项目有波奇网pc商城，o2o后台，h5商城，h5活动</p>
     </main>
 
-    <section class="skills" id="skill-part">
+    <section data-x class="skills" id="skill-part">
         <h3>技能</h3>
         <ol class="clearfix">
             <li><h4>html5&css3</h4><div class="progressBar"><div style="width:90%" class="innerBar"></div></div></li>
@@ -100,7 +100,7 @@
             <li><h4>Node.js   </h4><div class="progressBar"><div style="width:70%" class="innerBar"></div></div></li>
         </ol>
     </section>
-    <section class="projects" id="project-part">
+    <section data-x class="projects" id="project-part">
         <h3>项目</h3>
         <nav>
             <ol id="projectList" class="clearfix">

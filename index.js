@@ -1,8 +1,8 @@
 //loading
-var welcome = document.getElementById('welcome');
-setTimeout(function(){
-    welcome.className = 'site-welcome';
-},1500)
+// var welcome = document.getElementById('welcome');
+// setTimeout(function(){
+//     welcome.className = 'site-welcome';
+// },1500)
 //导航切换
 var oLi = document.querySelectorAll('nav.menu > ul > li');
 for (let i = 0; i < oLi.length; i++) {
@@ -79,4 +79,33 @@ window.onscroll = function() {
     } else {
         topNavBar.classList.remove('sticky')
     }
+    getNearElem();//获取到当前距离顶部最近的元素，让其显示
+}
+
+//添加offanimate类,使每个部分开始位置处于下面一点，当滑动页面的时候，再让其慢慢从下面跑上来，通过transform:translateY()来控制位置，通过transition:all 3s;来控制过度平滑
+var partTags = document.querySelectorAll('[data-x]');
+for (let i = 0; i < partTags.length; i++ ) {
+    partTags[i].classList.add('offanimate');   
+}
+setTimeout(function() {
+    getNearElem()
+},500)
+
+function getNearElem() {
+    var partTags = document.querySelectorAll('[data-x]');
+    var minIndex = 0;
+    for (var i = 0; i < partTags.length; i++) {
+        if(Math.abs(partTags[i].offsetTop - window.scrollY) < Math.abs(partTags[minIndex].offsetTop - window.scrollY)){
+            minIndex = i;
+        }  
+    }
+    let currId = partTags[minIndex].id;
+    let currLi = document.querySelector('a[href="#'+currId+'"]').parentNode;
+    let liBrothers = currLi.parentNode.children;
+    for (var i = 0; i < liBrothers.length; i++) {
+        liBrothers[i].classList.remove('highlight');
+    }
+    currLi.classList.add('highlight');
+    partTags[minIndex].classList.remove('offanimate'); 
+
 }
