@@ -186,7 +186,7 @@ main .self-info {
 .projects .light-bar .state-0{width: 50px;}
 .projects .light-bar .state-1{width: 70px; margin-left: 50px;}
 .projects .light-bar .state-2{width: 56px; margin-left: 120px;}
-.works {position:relative;height:602px;}
+.works {position:relative;height:597px;}
 .works div{ position: absolute}
 .works .small{left: 660px;}
 .works .small:nth-last-child(1) {top: 310px}
