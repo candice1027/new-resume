@@ -1,8 +1,12 @@
-//loading
-// var welcome = document.getElementById('welcome');
-// setTimeout(function(){
-//     welcome.className = 'site-welcome';
-// },1500)
+//初始化
+var APP_ID = '06PhcdkHFbxkFTivJ7dYjgR7-gzGzoHsz';
+var APP_KEY = 'cKPH0DRtJFYi1l1tb6e6lXTW';
+
+AV.init({
+  appId: APP_ID,
+  appKey: APP_KEY
+});
+
 //导航切换
 var oLi = document.querySelectorAll('nav.menu > ul > li');
 for (let i = 0; i < oLi.length; i++) {

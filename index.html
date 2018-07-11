@@ -116,13 +116,23 @@
             <div class="small"><img src="images/3.jpg" alt=""></div>
         </div>
     </section>
+    <section data-x class="message" id="message" style="width:500px;margin: 0 auto;">
+        <h3 style="text-align: center;">留言区</h3>
+        <ul id="messLi">
+            
+        </ul>
+        <form action="" id="postMessage" style="width:400px;margin:20px auto">
+            <label for="name"><input style="width: 150px;height:50px;padding-left:20px;" type="text" name="name" placeholder="请输入您的姓名"></label>
+            <label for="content"><input style="width: 150px;height:50px;padding-left:20px;" type="text" name="content" placeholder="请输入留言内容"></label>
+            <input type="submit" value="提交">
+        </form>
+    </section>
     <!-- 底部 -->
     <footer></footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.7.3/dist/av-min.js"></script>
+    <script src="jquery.js"></script>
     <script src="index.js"></script>
-    <script>
-
-        
-    </script>
+    <script src="message.js"></script>
 </body>
 </html>
