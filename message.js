@@ -2,10 +2,10 @@
 var APP_ID = '06PhcdkHFbxkFTivJ7dYjgR7-gzGzoHsz';
 var APP_KEY = 'cKPH0DRtJFYi1l1tb6e6lXTW';
 
-AV.init({
-  appId: APP_ID,
-  appKey: APP_KEY
-});
+// AV.init({
+//   appId: APP_ID,
+//   appKey: APP_KEY
+// });
 
 var query = new AV.Query('Message');
 //var messLi = document.getElementById('messLi');
@@ -20,12 +20,15 @@ query.find().then(function (data) {
   // 异常处理
 });
 
-var postMessageForm = document.getElementById('postMessage');
+//var postMessageForm = document.getElementById('postMessage');
+var postMessageForm = $('#postMessage')
+postMessageForm.submit(function(e){
 
-postMessageForm.addEventListener('submit',function(e){
+// })
+// postMessageForm.addEventListener('submit',function(e){
   e.preventDefault();
-  var content = postMessageForm.querySelector('input[name=content]').value;
-  var name = postMessageForm.querySelector('input[name=name]').value;
+  var content = $('input[name=content]').val();
+  var name = $('input[name=name]').val();
   if (name == '' || content == '') {
     alert('请输入完整的内容')
     return false;
@@ -36,6 +39,7 @@ postMessageForm.addEventListener('submit',function(e){
     content: content,
     name: name
   }).then(function(object) {
+    alert('留言成功')
     var oli = '<li>'+name+'说：'+content+'</li>';
     $('#messLi').append(oli)
     $('input[name=content]').val('');
