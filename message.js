@@ -8,7 +8,6 @@ var APP_KEY = 'cKPH0DRtJFYi1l1tb6e6lXTW';
 // });
 
 var query = new AV.Query('Message');
-//var messLi = document.getElementById('messLi');
 query.find().then(function (data) {
   var oli = '';
   for (var i = 0, len = data.length; i < len; i++) {
@@ -20,12 +19,9 @@ query.find().then(function (data) {
   // 异常处理
 });
 
-//var postMessageForm = document.getElementById('postMessage');
 var postMessageForm = $('#postMessage')
 postMessageForm.submit(function(e){
 
-// })
-// postMessageForm.addEventListener('submit',function(e){
   e.preventDefault();
   var content = $('input[name=content]').val();
   var name = $('input[name=name]').val();
